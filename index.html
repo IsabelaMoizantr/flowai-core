@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowAI Core — Intelligent Workflow Automation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Navigation Area -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="brand-logo">Flow<span>AI</span></span>
+      <span class="system-status">● System Active</span>
+    </div>
+  </nav>
+
+  <!-- Main Product Interface -->
+  <main class="dashboard-container">
+    
+    <!-- Input Section (Command Panel) -->
+    <section class="control-panel">
+      <h2>AI Workflow Engine</h2>
+      <p class="section-subtitle">Enter your daily log or operational overview to extract structured actions instantly.</p>
+      
+      <div class="input-group">
+        <textarea id="ai-input" placeholder="Example: Review the property database, update the marketing budget by 10%, and schedule a team sync tomorrow at 3 PM..."></textarea>
+        <button id="process-btn">Execute Workflow</button>
+      </div>
+    </section>
+
+    <!-- Output Section (Structured Results) -->
+    <section class="output-panel">
+      <h2>Automated Output</h2>
+      <p class="section-subtitle">Real-time data visualization and automated task categorization.</p>
+      
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>Task Extraction</h3>
+          <div id="tasks-output" class="data-placeholder">Awaiting operational sync...</div>
+        </div>
+        <div class="metric-card">
+          <h3>Priority Mapping</h3>
+          <div id="priority-output" class="data-placeholder">Awaiting structural analysis...</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

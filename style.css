@@ -1,0 +1,167 @@
+/* Core Styling & System Variables */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --accent-color: #38bdf8;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* System Navigation */
+.navbar {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.brand-logo span {
+  color: var(--accent-color);
+}
+
+.system-status {
+  font-size: 0.85rem;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+/* Responsive Grid Engine (Mobile-First) */
+.dashboard-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr; /* Single column default for mobile layouts */
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Screen Adaptability (Tablets & Desktop Computers) */
+@media (min-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 1fr; /* Splits smoothly into two vertical modules */
+  }
+}
+
+/* Operational Modules */
+.control-panel, .output-panel {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Interactive Text Input Area */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  padding: 1rem;
+  font-size: 0.95rem;
+  resize: none;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: var(--accent-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: #0f172a;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Module Analytics Cards */
+.metrics-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.metric-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  flex-grow: 1;
+}
+ 
+.metric-card h3 {
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.data-placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
